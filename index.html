@@ -37,10 +37,16 @@
       max-width: 1200px;
       margin-top: none;
     }
-    .flight-list th:nth-child(2),
+    .flight-list th:nth-child(2) {
+      min-width: 150px;
+      max-width: 160px;
+    }
     .flight-list td:nth-child(2) {
       min-width: 150px;
-      max-width: 150px;
+      max-width: 160px;
+      height: 54px;
+      vertical-align: middle;
+      text-align: center;
     }
     .table-scroll {
       overflow-x: auto;
@@ -73,10 +79,34 @@
       margin-top: none;
     }
     img.logo {
-      width: 150px;
+      width: 100%;
       height: 50px;
       display: block;
-      margin: 2px auto;
+      box-sizing: border-box;
+      padding: 2px 2px;
+    }
+    img.logo.raster {
+      width: auto;
+      display: inline-block;
+      object-fit: contain;
+    }    
+    img.logo.compound {
+      width: 100%;
+      height: 20px;
+      display: block;
+      box-sizing: border-box;
+      padding: 0 2px;
+    }
+    .compound-cell {
+      text-align: center;
+      padding: 2px;
+    }
+    .operated-by {
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 1;
+      margin: 2px 0;
+      padding: 0;
     }
     a {
       color: #25497d;
@@ -374,7 +404,7 @@
         </tr>
         <tr>
           <td>25</td>
-          <td><img class="logo" src="./images/MONOld.png" alt="" /></td>
+          <td><img class="logo" src="./images/MONOld.svg" alt="" /></td>
           <td>19 Jul 2001</td>
           <td>LGW-FAO</td>
           <td>MON 7886</td>
@@ -385,7 +415,7 @@
         </tr>
         <tr>
           <td>26</td>
-          <td><img class="logo" src="./images/MONOld.png" alt="" /></td>
+          <td><img class="logo" src="./images/MONOld.svg" alt="" /></td>
           <td>26 Jul 2001</td>
           <td>FAO-LGW</td>
           <td>MON 7887</td>
@@ -462,7 +492,7 @@
         </tr>
         <tr>
           <td>33</td>
-          <td><img class="logo" src="./images/BYOld.png" alt="" /></td>
+          <td><img class="logo" src="./images/BYOld.svg" alt="" /></td>
           <td>15 Aug 2002</td>
           <td>LGW-FAO</td>
           <td>BY 242A</td>
@@ -473,7 +503,7 @@
         </tr>
         <tr>
           <td>34</td>
-          <td><img class="logo" src="./images/BYOld.png" alt="" /></td>
+          <td><img class="logo" src="./images/BYOld.svg" alt="" /></td>
           <td>22 Aug 2002</td>
           <td>FAO-LGW</td>
           <td>BY 242B</td>
@@ -506,7 +536,7 @@
         </tr>
         <tr>
           <td>37</td>
-          <td><img class="logo" src="./images/VIK.png" alt="" /></td>
+          <td><img class="logo raster" src="./images/VIK.png" alt="" /></td>
           <td>08 Jul 2003</td>
           <td>STN-HER</td>
           <td>VIK 7321</td>
@@ -517,7 +547,7 @@
         </tr>
         <tr>
           <td>38</td>
-          <td><img class="logo" src="./images/VIK.png" alt="" /></td>
+          <td><img class="logo raster" src="./images/VIK.png" alt="" /></td>
           <td>15 Jul 2003</td>
           <td>HER-STN</td>
           <td>VIK 7320</td>
@@ -550,7 +580,7 @@
         </tr>
         <tr>
           <td>41</td>
-          <td><img class="logo" src="./images/VIK.png" alt="" /></td>
+          <td><img class="logo raster" src="./images/VIK.png" alt="" /></td>
           <td>06 Jul 2004</td>
           <td>STN-HER</td>
           <td>VIK 6225</td>
@@ -561,7 +591,7 @@
         </tr>
         <tr>
           <td>42</td>
-          <td><img class="logo" src="./images/VIK.png" alt="" /></td>
+          <td><img class="logo raster" src="./images/VIK.png" alt="" /></td>
           <td>13 Jul 2004</td>
           <td>HER-STN</td>
           <td>VIK 6224</td>
@@ -572,7 +602,7 @@
         </tr>
         <tr>
           <td>43</td>
-          <td><img class="logo" src="./images/FCA.png" alt="" /></td>
+          <td><img class="logo" src="./images/FCA.svg" alt="" /></td>
           <td>20 Feb 2005</td>
           <td>LGW-TRN</td>
           <td>FCA 4702</td>
@@ -583,7 +613,7 @@
         </tr>
         <tr>
           <td>44</td>
-          <td><img class="logo" src="./images/FCA.png" alt="" /></td>
+          <td><img class="logo" src="./images/FCA.svg" alt="" /></td>
           <td>27 Feb 2005</td>
           <td>TRN-LGW</td>
           <td>FCA 4703</td>
@@ -781,7 +811,7 @@
         </tr>
         <tr>
           <td>62</td>
-          <td><img class="logo" src="./images/4UOld.svg" alt="" /></td>
+          <td style="background-color: #ffdb06;"><img class="logo" src="./images/4UOld.svg" alt="" /></td>
           <td>20 Oct 2007</td>
           <td>STN-CGN</td>
           <td>4U 331</td>
@@ -792,7 +822,7 @@
         </tr>
         <tr>
           <td>63</td>
-          <td><img class="logo" src="./images/4UOld.svg" alt="" /></td>
+          <td style="background-color: #ffdb06;"><img class="logo" src="./images/4UOld.svg" alt="" /></td>
           <td>22 Oct 2007</td>
           <td>CGN-STN</td>
           <td>4U 338</td>
@@ -1012,7 +1042,11 @@
         </tr>
         <tr>
           <td>83</td>
-          <td><img class="logo" src="./images/EW.png" alt="" /></td>
+          <td class="compound-cell">
+            <img class="logo compound" src="./images/LHRegional.svg" alt="" />
+            <div class="operated-by">operated by</div>
+            <img class="logo compound" src="./images/EW.svg" alt="" />
+          </td>
           <td>25 Jun 2011</td>
           <td>LHR-DRS</td>
           <td>LH 3407</td>
@@ -1023,7 +1057,11 @@
         </tr>
         <tr>
           <td>84</td>
-          <td><img class="logo" src="./images/EW.png" alt="" /></td>
+          <td class="compound-cell">
+            <img class="logo compound" src="./images/LHRegional.svg" alt="" />
+            <div class="operated-by">operated by</div>
+            <img class="logo compound" src="./images/EW.svg" alt="" />
+          </td>
           <td>02 Jul 2011</td>
           <td>DRS-LHR</td>
           <td>LH 3406</td>
@@ -1155,7 +1193,7 @@
         </tr>
         <tr>
           <td>96</td>
-          <td><img class="logo" src="./images/YS.png" alt="" /></td>
+          <td><img class="logo" src="./images/YS.svg" alt="" /></td>
           <td>26 Oct 2012</td>
           <td>HAJ-CDG</td>
           <td>AF 5489</td>
@@ -1188,7 +1226,7 @@
         </tr>
         <tr>
           <td>99</td>
-          <td><img class="logo" src="./images/YS.png" alt="" /></td>
+          <td><img class="logo" src="./images/YS.svg" alt="" /></td>
           <td>29 Oct 2012</td>
           <td>CDG-HAJ</td>
           <td>AF 5500</td>
