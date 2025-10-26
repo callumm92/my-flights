@@ -3385,7 +3385,7 @@
 <script>
   const table = document.querySelector('table.flight-list');
   // Select all rows except the header
-  const rows = table.querySelectorAll('tr:not(.no-hover):not(:first-child)');
+  const rows = table.querySelectorAll('tbody tr:not(.no-hover)');
   rows.forEach((row, index) => {
     row.cells[0].textContent = index + 1; // IDs start at 1
   });
